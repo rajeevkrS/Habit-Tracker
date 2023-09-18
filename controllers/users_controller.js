@@ -1,8 +1,6 @@
 const User = require('../models/user');
 
 
-
-
 // redirects the user to sign up page
 module.exports.signUp = async function(req, res) {
     try {
@@ -38,7 +36,8 @@ module.exports.create = async function(req, res) {
             return res.redirect('back');
         }
         let user = await User.findOne({ email: req.body.email });
-        // if user is not present 
+
+        // if user is present or not
         if (!user) {
             // create the user 
             // console.log(req.body);
@@ -46,7 +45,9 @@ module.exports.create = async function(req, res) {
             // redirect to sign in page
             return res.redirect("/users/sign-in");
         }
+        
         console.log('User is already present');
+        req.flash('error', 'User Already Present!');
         return res.redirect('back');
         
     } catch (error) {

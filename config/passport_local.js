@@ -30,7 +30,7 @@ passport.deserializeUser(async function(id, done){
     let userId = await User.findById(id);
     if(!userId){
         console.log("Error in passport_local/deserializeUser");
-        return ;
+        return done(null, false);
     } 
     return done(null, userId);
 });
