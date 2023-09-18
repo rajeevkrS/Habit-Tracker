@@ -11,7 +11,7 @@ To run this application on your local machine, please follow these steps:
 
 Clone this repository using the following command:
 ```
-$ git clone 
+$ git clone https://github.com/rajeevkrS/Habit-Tracker
 ```
 Install the required dependencies using the following command:
 ```
