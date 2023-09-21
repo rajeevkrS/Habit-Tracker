@@ -6,6 +6,9 @@ The project is built using a tech stack consisting of Node.js for the server-sid
 Express for handling HTTP requests and routing.
 MongoDB for storing and managing the data and EJS for rendering the views and templates.
 
+### Live Link :
+https://habit-tracker-fg2x.onrender.com/
+
 ## Installation
 To run this application on your local machine, please follow these steps:
 
